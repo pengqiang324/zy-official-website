@@ -1,0 +1,32 @@
+.link-list {
+    position: relative;
+    display: inline-block;
+    margin-right: 40px;
+    padding: 0 10px;
+    width: 100px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.link-children {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100px;
+    padding: 0 10px;
+    background: #fff;
+    z-index: 111;
+    display: none;
+    .link-children--item {
+        display: inline-block;
+        width: 100%;
+        font-size: 14px;
+        line-height: 36px;
+        text-align: center;
+        color: rgb(119, 119, 119);
+        &:hover {
+            color: rgb(51, 51, 51) !important;
+            cursor: pointer;
+        }
+    }
+}

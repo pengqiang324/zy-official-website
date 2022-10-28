@@ -1,0 +1,109 @@
+.rules-banner {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background: url('./images/bg.png') center no-repeat;
+}
+
+.rules-box {
+    padding: 18px 0;
+    height: 791px;
+    background: #fff;
+}
+
+.rules-content {
+    display: flex;
+    height: 100%;
+}
+
+.rules-box-tab {
+    padding-top: 50px;
+    width: 225px;
+    height: 100%;
+    background: #f13a3a;
+    .rules-tab-nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        height: 45px;
+        margin-bottom: 20px;
+        &.rules-tab-on {
+            p {
+                width: 144px;
+                opacity: 1;
+            }
+            span {
+                color: #f13a3a;
+            }
+        }
+
+        p, span {
+            height: 45px;
+            line-height: 45px;
+            font-size: 16px;
+        }
+        p {
+            width: 100px;
+            position: absolute;
+            top:0;
+            right: 0;
+            background: #fff;
+            z-index: 10;
+            border-radius: 30px 0 0 30px;
+            opacity: 0;
+            transition: all .35s;
+        }
+        span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 11;
+            display: block;
+            width: 114px;
+            text-align: center;
+            color: #fff;
+            cursor: default;
+        }
+    }
+}
+
+.rules-box-list {
+    flex: 1;
+}
+
+.rules-box-list {
+    flex: 1;
+    margin-left: 40px;
+}
+
+.rule-title {
+    padding: 25px 0 8px;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+}
+
+.rules-box-protol {
+    .rule-news {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        h2, p {
+            margin: 0;
+        }
+        h2 {
+            font-size: 16px;
+            color: #333;
+        }
+        p {
+            font-size: 14px;
+            color: #999;
+        }
+    }
+    .rule-news-line {
+        border-top: 1px solid hsla(0, 0%, 60%, .15);
+        margin: 5px 0;
+    }
+}
