@@ -1,0 +1,124 @@
+
+.leaderShipCare-banner {
+    height: 450px;
+    background: url('../News/images/banner.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.leaderShipCare-info {
+    padding: 42px 0 70px;
+}
+
+.leaderShipCare-tabs {
+    height: 860px;
+    margin-bottom: 70px;
+}
+
+.leaderShipCare {
+    .shop-info--news {
+        .shop-news--left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px 0;
+            font-size: 14px;
+
+            h3,
+            p {
+                text-align: left;
+                color: #626971;
+                margin: 0;
+            }
+
+            h3 {
+                line-height: 36px;
+                font-weight: 400;
+                font-size: 24px;
+            }
+        }
+        .shop-news--right {
+            width: 830px;
+            padding-right: 40px;
+
+            h2,
+            p {
+                text-align: left;
+            }
+
+            h2 {
+                font-weight: 400;
+                color: #333;
+                font-size: 16px;
+                margin-bottom: 14px;
+                line-height: 21px;
+            }
+
+            p {
+                margin-bottom: 0;
+                width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 14px;
+                color: #878787;
+                line-height: 26px;
+            }
+        }
+    }
+
+    .shop-news--list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .shop-news-line {
+        margin: 29px 0;
+        border-top: 1px solid hsla(0, 0%, 60%, .15);
+        ;
+    }
+}
+
+.LeadershipGuidance {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .LeadershipGuidance-left {
+        width: 240px;
+        padding: 10px 0;
+        margin-right: 43px;
+        .LeadershipGuidance-bg {
+            margin-bottom: 30px;
+            width: 100%;
+            height: 153px;
+            background-size: cover;
+            background: url('./images/bg1.jpg') center no-repeat;
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                height: 180px;
+            }
+            &:nth-child(2) {
+                background-image: url('./images/bg2.jpg');
+            }
+            &:nth-child(3) {
+                background-image: url('./images/bg3.png');
+            }
+            &:nth-child(4) {
+                background-image: url('./images/bg4.png');
+            }
+        }
+    }
+    .LeadershipGuidance-right {
+        flex: 1;
+        .LeadershipGuidance-right--dot {
+            position: relative;
+            top: -5px;
+            padding-left: 30px;
+            text-align: left;
+            line-height: 35px;
+            color: rgb(102, 102, 102);
+        }
+    }
+}

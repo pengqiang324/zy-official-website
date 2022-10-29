@@ -5,7 +5,7 @@ import ReactPaginate from 'react-paginate';
 function Pagination({ list, setCurrentItems }) {
     const [pageCount, setPageCount] = useState(0) // 分页总数
     const [itemOffset, setItemOffset] = useState(0) // 页面请求偏移量
-    const itemsPerPage = 2
+    const itemsPerPage = 5
     useEffect(() => {
         const endOffset = itemOffset + itemsPerPage
         console.log(`Loading items from ${itemOffset} to ${endOffset}`)

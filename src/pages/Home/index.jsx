@@ -3,13 +3,12 @@ import Companner from './images/bg1.png'
 import CompannerBg from './images/bg2.png'
 import ShopBg from './images/bg3.png'
 import Marquee from "react-fast-marquee"
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Banner from './components/banner'
 import { getImage } from './utils'
-import { OverPack } from 'rc-scroll-anim'
-import TweenOne from 'rc-tween-one'
-import QueueAnim from 'rc-queue-anim'
+import TransitionWidth from '@/components/TransitionWidth/TransitionWidth'
+// import QueueAnim from 'rc-queue-anim'
 // import Player from 'griffith'
 
 // const sources = {
@@ -80,14 +79,10 @@ function Home() {
                     <img src={CompannerBg} alt="公司介绍" className="company_Introduction--bg" />
                 </div>
                 <div className="company_Introduction--right">
-                    <div style={{ position: 'relative' }}>
+                    <TransitionWidth>
                         <h2>公司介绍</h2>
-                        <OverPack key="0" always={false} playScale={0.1}>
-                            <TweenOne key="2" animation={{ width: 0, duration: 800 }} className="company_bg">
-                            </TweenOne>
-                        </OverPack>
-                    </div>
-                    <h4 >COMPANY INTRODUCTION</h4>
+                        <h4 >COMPANY INTRODUCTION</h4>
+                    </TransitionWidth>
                     <div style={{ color: '#777', textAlign: 'left' }}>——</div>
                     <p> 湖南赞友数字科技有限公司成立于2021年8月，总部设在湖南省长沙市高新区。公司诞生在“互联网+时代乡村振兴”的战略背景下，是一家为“乡村振兴”提供产业扶持、产业培育、乡村市场拓展、产品销售、运营维护等及供应链管理于一体的多元化电子商务综合服务性企业。</p>
                     <p className="company_Introduction--text"> “赞友科技”自成立以来，始终坚持“诚信为本 创新为魂”的发展理念。公司荟萃业界精英，致力于通过公司团队优势、平台优势、流量优势、营销宣传、联盟合作企业资源联动等优势，利用“赞友商城”APP电商平台，助推乡村振兴适应数字化新时代，助推新经济、激发新动能、释放新红利，关注新乡村的发展；“汇聚城市和乡村的力量”，深层次的推动“城乡交汇和融合”；在承担社会责任中实现企业价值。</p>
