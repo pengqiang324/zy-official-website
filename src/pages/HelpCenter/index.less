@@ -1,0 +1,85 @@
+.HelpCenter-banner {
+    height: 512px;
+    background: url('./images/banner.jpg') center no-repeat;
+    background-size: cover;
+    .fixed-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 80px;
+    }
+    .HelpCenter-banner--left {
+        width: 471px;
+        margin-right: 155px;
+        h2, p {
+            text-align: left;
+            color: #fff;
+            line-height: 32px;
+        }
+        h2 {
+            margin-bottom: 35px;
+            font-size: 24px;
+        }
+        p {
+            font-size: 14px;
+        }
+        .HelpCenter--more {
+            margin-top: 15px;
+            width: 142px;
+            height: 48px;
+            line-height: 48px;
+            text-align: center;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6307339449541285);
+            border: 1px solid rgba(255, 255, 255, 0.3412322274881517);
+            cursor: pointer;
+        }
+    }
+    .HelpCenter-banner--right {
+        position: relative;
+        .HelpCenter--video {
+            position: relative;
+            width: 526px;
+            height: 340px;
+            z-index: 11;
+            .HelpCenter--video--info {
+                position: relative;
+                height: 340px;
+                background: url('./images/video.jpg') center no-repeat;
+                background-size: cover;
+                cursor: pointer;
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 60px;
+                    height: 60px;
+                    background: url('../../assets/images/icon.png') -2308px -845px no-repeat;
+                    top: 50%;
+                    left: 50%;
+                    margin-top: -30px;
+                    margin-left: -30px;
+                }
+            }
+        }
+        &:after,
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 230px;
+            height: 180px;
+            background: rgb(30,125,229);
+        }
+
+        &:after {
+            bottom: -25px;
+            left: -25px;
+        }
+
+        &:before {
+            top: -25px;
+            right: -25px;
+        }
+    }
+}

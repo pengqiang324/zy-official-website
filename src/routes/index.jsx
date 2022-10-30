@@ -10,6 +10,7 @@ import LeadershipCare from '../pages/LeadershipCare'
 import RuralRevitalization from '../pages/RuralRevitalization'
 import RadioStations from '../pages//RadioStations'
 import ResultsShow from '../pages/ResultsShow'
+import HelpCenter from '../pages/HelpCenter'
 
 // 重定向
 function Redirect({ to }) {
@@ -62,6 +63,10 @@ const routes = [
         element: <ResultsShow/>
     },
     {
+        path: '/HelpCenter',
+        element: <HelpCenter/>
+    },
+    {
         path: "/",
         element: <Redirect to="/home" />
     }
@@ -94,6 +99,20 @@ export const childRoutes = {
             path: '/ResultsShow',
             name: '成果展示'
         }
+    ],
+    '/HelpCenter': [
+        {
+            path: '/RadioStations',
+            name: '新手指南'
+        },
+        {
+            path: '/RadioStations',
+            name: '视频'
+        },
+        {
+            path: '/RadioStations',
+            name: '政策要闻'
+        }
     ]
 }
 
@@ -108,7 +127,8 @@ export const pageTitles = {
     '/LeadershipCare': '领导关怀',
     '/RuralRevitalization': '乡村振兴',
     '/RadioStations': '广播站',
-    '/ResultsShow': '成果展示'
+    '/ResultsShow': '成果展示',
+    '/HelpCenter': '帮助中心'
 }
 
 export default routes
