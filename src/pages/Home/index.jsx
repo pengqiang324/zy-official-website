@@ -1,6 +1,7 @@
 import './index.less'
 import Companner from './images/bg1.png'
 import CompannerBg from './images/bg2.png'
+import CompannerBg2 from './images/icon.png'
 import ShopBg from './images/bg3.png'
 import Marquee from "react-fast-marquee"
 import { useState } from 'react'
@@ -8,6 +9,7 @@ import { useNavigate } from 'react-router-dom'
 import Banner from './components/banner'
 import { getImage } from './utils'
 import TransitionWidth from '@/components/TransitionWidth/TransitionWidth'
+import ScrollWidthTweenOne from '@/components/ScrollWidthTweenOne/ScrollWidthTweenOne'
 // import QueueAnim from 'rc-queue-anim'
 // import Player from 'griffith'
 
@@ -77,6 +79,7 @@ function Home() {
                 <div className="company_Introduction--left">
                     <img src={Companner} alt="公司介绍"/>
                     <img src={CompannerBg} alt="公司介绍" className="company_Introduction--bg" />
+                    <img src={CompannerBg2} alt="公司介绍" className="company_Introduction--bg2" />
                 </div>
                 <div className="company_Introduction--right">
                     <TransitionWidth>
@@ -106,7 +109,18 @@ function Home() {
                     <div className="us_advantages--list">
                         <div className="us_advantages--item">
                             <div className="us_advantages--top">
-                                5<span>亿+</span>
+                                <div className="us-num">
+                                    <ScrollWidthTweenOne replay={true} playScale={0.1} animation={{ y: '-80%', ease: 'linear' }}>
+                                        <div className="us_advantages--num">
+                                            <p>0</p>
+                                            <p>1</p>
+                                            <p>2</p>
+                                            <p>4</p>
+                                            <p>5</p>
+                                        </div>
+                                    </ScrollWidthTweenOne>
+                                </div>
+                                <span>亿+</span>
                             </div>
                             <div className="us_advantages--pri">
                                 分享电商板块销售额
@@ -114,7 +128,8 @@ function Home() {
                         </div>
                         <div className="us_advantages--item">
                             <div className="us_advantages--top">
-                                500<span>万+笔</span>
+                                500
+                                <span>万+笔</span>
                             </div>
                             <div className="us_advantages--pri">
                                 分享平台累计订单数
@@ -122,7 +137,20 @@ function Home() {
                         </div>
                         <div className="us_advantages--item">
                             <div className="us_advantages--top">
-                                15<span>万+</span>
+                                <div className="us-num">
+                                    <ScrollWidthTweenOne replay={true} playScale={0.1} animation={{ y: '-86%', ease: 'linear' }}>
+                                        <div className="us_advantages--num">
+                                            <p>00</p>
+                                            <p>02</p>
+                                            <p>04</p>
+                                            <p>08</p>
+                                            <p>10</p>
+                                            <p>13</p>
+                                            <p>15</p>
+                                        </div>
+                                    </ScrollWidthTweenOne>
+                                </div>
+                                <span>万+</span>
                             </div>
                             <div className="us_advantages--pri">
                                 海量优质商品
@@ -130,7 +158,17 @@ function Home() {
                         </div>
                         <div className="us_advantages--item">
                             <div className="us_advantages--top">
-                                3<span>万+</span>
+                                <div className="us-num">
+                                    <ScrollWidthTweenOne replay={true} playScale={0.1} animation={{ y: '-75%', ease: 'linear' }}>
+                                        <div className="us_advantages--num">
+                                            <p>0</p>
+                                            <p>1</p>
+                                            <p>2</p>
+                                            <p>3</p>
+                                        </div>
+                                    </ScrollWidthTweenOne>
+                                </div>
+                                <span>万+</span>
                             </div>
                             <div className="us_advantages--pri">
                                 优质商户
@@ -152,15 +190,55 @@ function Home() {
                     </div>
                     <div className="party_building--right">
                         <div className="party_building--item">
-                            <div className="party_item--text">3<span>人</span></div>
+                            <div className="party_item--text">
+                                <div className="us-num">
+                                    <ScrollWidthTweenOne replay={true} playScale={0.1} animation={{ y: '-84%', ease: 'linear' }}>
+                                        <div className="us_advantages--num">
+                                            <p>0</p>
+                                            <p>1</p>
+                                            <p>2</p>
+                                            <p>3</p>
+                                        </div>
+                                    </ScrollWidthTweenOne>
+                                </div>
+                                <span>人</span>
+                            </div>
                             <div className="party_item--pri">正式党员</div>
                         </div>
                         <div className="party_building--item">
-                            <div className="party_item--text">3<span>人</span></div>
+                            <div className="party_item--text">
+                                <div className="us-num">
+                                    <ScrollWidthTweenOne replay={true} playScale={0.1} animation={{ y: '-84%', delay: 240, ease: 'linear' }}>
+                                        <div className="us_advantages--num">
+                                            <p>0</p>
+                                            <p>1</p>
+                                            <p>2</p>
+                                            <p>3</p>
+                                        </div>
+                                    </ScrollWidthTweenOne>
+                                </div>
+                                <span>人</span>
+                            </div>
                             <div className="party_item--pri">流动党员</div>
                         </div>
                         <div className="party_building--item">
-                            <div className="party_item--text">15<span>人</span></div>
+                            <div className="party_item--text">
+                                <div className="us-num">
+                                    <ScrollWidthTweenOne replay={true} playScale={0.1} animation={{ y: '-92%', delay: 120, ease: 'linear' }}>
+                                        <div className="us_advantages--num">
+                                            <p>0</p>
+                                            <p>2</p>
+                                            <p>4</p>
+                                            <p>6</p>
+                                            <p>9</p>
+                                            <p>11</p>
+                                            <p>13</p>
+                                            <p>15</p>
+                                        </div>
+                                    </ScrollWidthTweenOne>
+                                </div>
+                                <span>人</span>
+                            </div>
                             <div className="party_item--pri">入党积极分子</div>
                         </div>
                     </div>

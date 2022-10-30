@@ -2,12 +2,12 @@ import './TransitionWidth.less'
 import { OverPack } from 'rc-scroll-anim'
 import TweenOne from 'rc-tween-one'
 
-function TransitionWidth({ children, duration=800}) {
+function TransitionWidth({ children, duration = 800, replay = true, delay=0 }) {
     return (
         <div style={{ position: 'relative' }}>
             { children }
-            <OverPack key="0" always={false} playScale={0.1}>
-                <TweenOne key="2" animation={{ width: 0, duration }} className="company_bg">
+            <OverPack key={children} replay={replay} always={false} playScale={0.1}>
+                <TweenOne key={children} animation={{ width: 0, duration, delay }} className="company_bg">
                 </TweenOne>
             </OverPack>
         </div>

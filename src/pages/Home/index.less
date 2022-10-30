@@ -29,6 +29,14 @@
         right: -32px;
         bottom: 58px;
     }
+    .company_Introduction--bg2 {
+        position: absolute;
+        width: 22px;
+        height: 23px;
+        left: 0;
+        top: 95px;
+        opacity: .6;
+    }
 }
 
 .company_Introduction--right {
@@ -138,13 +146,28 @@
         height: 180px;
         background: #fff;
     }
+    .us-num {
+        height: 80px;
+        overflow: hidden;
+    }
     .us_advantages--top {
         color: rgb(196, 0, 0);
         font-size: 52px;
         font-weight: 500;
+        display: flex;
+        align-items: center;
+        .us_advantages--num {
+            transition: all .3s;
+        }
+        p {
+            margin: 0;
+            color: rgb(196, 0, 0);
+            font-size: 52px;
+            font-weight: 500;
+        }
         span {
             position: relative;
-            top: -2px;
+            top: 5px;
             margin-left: 10px;
             font-size: 30px;
         }
@@ -219,22 +242,20 @@
             text-align: center;
             cursor: pointer;
             &:hover:before {
-                animation: wave .75s;
-                z-index: 1;
+                width: 100%;
             }
             &:before {
                 content: "";
                 position: absolute;
                 display: block;
-                transform-origin: left top;
-                transition: all .6s;
+                transition: all .35s;
                 width: 100%;
                 height: 100%;
-                border-radius: 50%;
                 left: 50%;
                 top: 50%;
-                padding-top: 100%;
+                width: 0;
                 transform: translateX(-50%) translateY(-50%);
+                background: rgba(255,255,255,.3);
             }
             span {
                 margin-left: 10px;
@@ -264,6 +285,13 @@
         align-items: center;
         font-size: 48px;
         font-weight: bold;
+        height: 100px;
+        overflow: hidden;
+        .us-num {
+            width: 100%;
+            height: 60px;
+            overflow: hidden;
+        }
         span {
             margin-left: 30px;
             display: block;
@@ -310,10 +338,5 @@
             color: rgb(102, 102, 102);
         }
     }
-}
-
-@keyframes wave {
-    0% { transform: scale(0); }
-    100% {  background: rgba(0, 0, 0, .5); transform: scale(.4);}
 }
 

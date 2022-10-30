@@ -8,6 +8,8 @@ import News from '../pages/News'
 import CompanyNews from '../pages/CompanyNews'
 import LeadershipCare from '../pages/LeadershipCare'
 import RuralRevitalization from '../pages/RuralRevitalization'
+import RadioStations from '../pages//RadioStations'
+import ResultsShow from '../pages/ResultsShow'
 
 // 重定向
 function Redirect({ to }) {
@@ -52,8 +54,16 @@ const routes = [
         element: <RuralRevitalization />
     },
     {
+        path: "/RadioStations",
+        element: <RadioStations/>
+    },
+    {
+        path: '/ResultsShow',
+        element: <ResultsShow/>
+    },
+    {
         path: "/",
-        element: <Redirect to="/Home" />
+        element: <Redirect to="/home" />
     }
 ]
 
@@ -77,11 +87,11 @@ export const childRoutes = {
     ],
     '/RuralRevitalization': [
         {
-            path: '/a',
+            path: '/RadioStations',
             name: '广播站'
         },
         {
-            path: '/a',
+            path: '/ResultsShow',
             name: '成果展示'
         }
     ]
@@ -96,7 +106,9 @@ export const pageTitles = {
     '/news': '新闻中心',
     '/companyNews': '公司动态',
     '/LeadershipCare': '领导关怀',
-    '/RuralRevitalization': '乡村振兴'
+    '/RuralRevitalization': '乡村振兴',
+    '/RadioStations': '广播站',
+    '/ResultsShow': '成果展示'
 }
 
 export default routes

@@ -9,7 +9,7 @@ function App() {
   const element = useRoutes(routes);
   const location = useLocation()
   useEffect(() => {
-    document.title = pageTitles[location.pathname]
+    document.title = pageTitles[location.pathname] || '赞友科技'
   })
   return (
     <div className="App">
