@@ -9,6 +9,7 @@ import video3 from './images/video3.jpg'
 import Video from '@/components/Video/Video'
 import LeaderList from './components/LeaderList'
 import MediaCoverage from './components/MediaCoverage'
+import Banner from './components/Banner'
 
 // 批量导入视频
 export const getVideo = (suffix) => {
@@ -83,7 +84,7 @@ function News() {
     return (
         <>
             <div className='news'>
-                <div className="banner-header"></div>
+                <Banner/>
                 <div className="shop-info">
                     <div className="fixed-box">
                         <OverPack

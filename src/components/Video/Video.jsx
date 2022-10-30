@@ -4,12 +4,16 @@ import Player from 'griffith'
 
 function Video({ showModel, sources, cover, setShowModel }) {
     return (
-        <div className={`video-model ${!showModel ? 'video-model--on' : ''}`}>
-            <div className="video-box">
-                <Player sources={sources} locale="zh-Hans" disablePictureInPicture={true} cover={cover} />
-                <span className="video-close" onClick={() => setShowModel(false)}></span>
-            </div>
-        </div>
+        <>
+            { showModel ? (
+                <div className='video-model'>
+                    <div className="video-box">
+                        <Player sources={sources} locale="zh-Hans" disablePictureInPicture={true} cover={cover} />
+                        <span className="video-close" onClick={() => setShowModel(false)}></span>
+                    </div>
+                </div>
+            ) : null }
+        </>
     )
 }
 

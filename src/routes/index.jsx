@@ -11,6 +11,9 @@ import RuralRevitalization from '../pages/RuralRevitalization'
 import RadioStations from '../pages//RadioStations'
 import ResultsShow from '../pages/ResultsShow'
 import HelpCenter from '../pages/HelpCenter'
+import BeginnersGuide from '../pages/BeginnersGuide'
+import VideoList from '../pages/VideoList'
+import PolicyHighlights from '../pages/PolicyHighlights'
 
 // 重定向
 function Redirect({ to }) {
@@ -67,6 +70,18 @@ const routes = [
         element: <HelpCenter/>
     },
     {
+        path: '/BeginnersGuide',
+        element: <BeginnersGuide/>
+    },
+    {
+        path: '/VideoList',
+        element: <VideoList/>
+    },
+    {
+        path: '/PolicyHighlights',
+        element: <PolicyHighlights/>
+    },
+    {
         path: "/",
         element: <Redirect to="/home" />
     }
@@ -102,15 +117,15 @@ export const childRoutes = {
     ],
     '/HelpCenter': [
         {
-            path: '/RadioStations',
+            path: '/BeginnersGuide',
             name: '新手指南'
         },
         {
-            path: '/RadioStations',
+            path: '/VideoList',
             name: '视频'
         },
         {
-            path: '/RadioStations',
+            path: '/PolicyHighlights',
             name: '政策要闻'
         }
     ]
@@ -128,7 +143,10 @@ export const pageTitles = {
     '/RuralRevitalization': '乡村振兴',
     '/RadioStations': '广播站',
     '/ResultsShow': '成果展示',
-    '/HelpCenter': '帮助中心'
+    '/HelpCenter': '帮助中心',
+    '/BeginnersGuide': '新手指南',
+    '/VideoList': '视频列表',
+    '/PolicyHighlights': '政策要闻'
 }
 
 export default routes
