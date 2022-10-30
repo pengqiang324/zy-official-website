@@ -83,3 +83,230 @@
         }
     }
 }
+
+.HelpCenter-info {
+    padding: 45px 0 60px;
+    background: rgba(245, 246, 247, 1);
+    .HelpCenter-info--header {
+        width: 544px;
+        height: 94px;
+        margin: 0 auto 35px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+            margin: 0;
+            font-size: 72px;
+            color: rgb(235, 235, 235);
+            font-weight: bold;
+            opacity: .8;
+            font-style: italic;
+            font-family: fantasy;
+            letter-spacing: 5px
+        }
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            font-size: 30px;
+            color: rgb(51, 51, 51);
+            font-weight: bold;
+        }
+    }
+    .HelpCenter-info--list {
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        .HelpCenter-list--left,
+        .HelpCenter-list--right {
+            background: #fff;
+            border-radius: 4px;
+        }
+        .HelpCenter-list--left {
+            padding: 30px 10px;
+            margin-right: 15px;
+            width: 335px;
+            height: 536px;
+            .HelpCenter-left-header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                span {
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    background: url('./images/icon.png') center no-repeat;
+                    background-size: 100% 100%;
+                    margin-right: 12px;
+                }
+                h2 {
+                    margin: 0;
+                    text-align: left;
+                    font-size: 24px;
+                    color: rgb(51, 51, 51);
+                }
+            }
+            .HelpCenter-left-line {
+                margin-right: 0;
+                width: 305px;
+                height: 30px;
+                margin: auto;
+                background: url('./images/bg.png') center no-repeat;
+                background-size: 100% 100%;
+            }
+            .HelpCenter-left-list {
+                padding: 0 32px;
+                .HelpCenter-list--item {
+                    text-align: left;
+                    padding: 10px;
+                    font-size: 15px;
+                    color: #333;
+                    cursor: pointer;
+                }
+            }
+        }
+        .HelpCenter-list--right {
+            width: 790px;
+            height: 536px;
+            background: url('./images/bg7.png') center no-repeat;
+            background-size: cover;
+            .HelpCenter-right--top {
+                padding: 45px 15px 80px 70px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .HelpCenter-top--left {
+                    margin-right: 20px;
+                    width: 224px;
+                    height: 168px;
+                    border-radius: 5px;
+                    background: url('./images/bg2.png') center no-repeat;
+                    background-size: cover;
+                }
+                .HelpCenter-top--right {
+                    flex: 1;
+                    h4 {
+                        padding-left: 20px;
+                        padding-top: 10px;
+                        margin: 0;
+                        text-align: left;
+                        font-size: 20px;
+                        color: rgb(61, 34, 34);
+                        margin-bottom: 6px;
+                    }
+                    .HelpCenter-top-right--info {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        width: 449px;
+                        height: 120px;
+                        background: url('./images/bg5.png') center no-repeat;
+                        background-size: 100% 100%;
+                        padding: 30px 20px;
+                        p {
+                            margin: 0;
+                            text-align: left;
+                            font-size: 14px;
+                            color: #666;
+                            line-height: 28px;
+                        }
+                    }
+                }
+            }
+            .HelpCenter-right--bottom {
+                .HelpCenter-bottom--list {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    padding: 0 25px;
+                    .HelpCenter-list--item {
+                        width: 279px;
+                        cursor: pointer;
+                        &:last-child {
+                            .HelpCenter-item--image {
+                                background-image: url('./images/bg4.png');
+                            }
+                        }
+                        .HelpCenter-item--image {
+                            border-radius: 10px;
+                            height: 180px;
+                            background: url('./images/bg3.png') center no-repeat;
+                            background-size: cover;
+                            overflow: hidden;
+                        }
+                        h4 {
+                            margin: 0;
+                            padding-top: 10px;
+                            font-size: 15px;
+                            color: #333;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.HelpCenter-problem {
+    padding: 40px 0 0px;
+    background: url('./images/bg6.png') left top no-repeat;
+    h2, p {
+        margin: 0;
+        color: #fff;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    p {
+        padding-top: 5px;
+        font-size: 15px;
+    }
+    .HelpCenter-problem--bg {
+        width: 524px;
+        height: 30px;
+        margin: 10px auto;
+        background: url('./images/bg8.png') center no-repeat;
+        background-size: 100% 100%;
+    }
+    .HelpCenter-problem--list {
+        width: 100%;
+        height: 805px;
+        padding: 60px 60px 60px 40px;
+        background: url('./images/bg9.png') center no-repeat;
+        background-size: 100% 100%;
+        .HelpCenter-problem--item {
+            margin-bottom: 60px;
+            h4, p {
+                text-align: left;
+                margin: 0;
+            }
+            h4 {
+                margin-bottom: 5px;
+                font-size: 16px;
+                font-weight: bold;
+                text-indent: 35px;
+                background: url('./images/bg10.png') left center no-repeat;
+                background-size: 30px 30px;
+            }
+            div {
+                width: 100%;
+                height: 20px;
+                background: url('./images/bg11.png') 10px center no-repeat;
+                background-size: 100% 100%;
+            }
+            p {
+                padding-left: 35px;
+                padding-top: 0;
+                color: rgb(102, 102, 102);
+                font-size: 14px;
+            }
+        }
+    }
+}

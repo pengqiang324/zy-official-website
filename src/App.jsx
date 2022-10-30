@@ -1,4 +1,4 @@
-import './App.css'
+import './App.less'
 import { useEffect } from 'react'
 import { useRoutes, useLocation } from 'react-router-dom'
 import Header from './components/Header/Header'
