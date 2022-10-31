@@ -1,17 +1,35 @@
 import { getImage } from '../utils'
+import { useState } from 'react'
 import Img from '../images/banner1.jpg'
 import Img2 from '../images/banner5.png'
-import BannerAnim, { Element } from 'rc-banner-anim';
-import TweenOne from 'rc-tween-one';
-import 'rc-banner-anim/assets/index.css';
+import BannerAnim, { Element, Thumb } from 'rc-banner-anim'
+import TweenOne from 'rc-tween-one'
+import 'rc-banner-anim/assets/index.css'
 import './banner.less'
-const BgElement = Element.BgElement;
+const BgElement = Element.BgElement
 
 
 function Banner() {
+    const [thumbEnter, setThumbEnter] = useState(false)
+    const onMouseEnter = ()  => {
+        setThumbEnter(true)
+    }
+
+    const onMouseLeave = () => {
+        setThumbEnter(false)
+    }
+    const imgArray = [Img, Img2]
+    const thumbChildren = imgArray.map((img, i) =>
+        <span key={i}><i style={{ backgroundImage: `url(${img})` }} /></span>
+    )
     return (
         <>
-            <BannerAnim prefixCls="banner-user" autoPlay={true}>
+            <BannerAnim
+            prefixCls="banner-user" 
+            autoPlay={true}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave} 
+            >
                 <Element
                     prefixCls="banner-user-elem"
                     key="0"
@@ -67,6 +85,9 @@ function Banner() {
                         </TweenOne>
                     </div>
                 </Element>
+                <Thumb prefixCls="user-thumb" key="thumb" style={{ transform: thumbEnter ? 'translateY(0)' : 'translateY(70px)'}}>
+                    {thumbChildren}
+                </Thumb>
             </BannerAnim>
         </>
     )

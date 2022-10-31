@@ -51,9 +51,9 @@ function Home() {
             title: '贵州省“黔系列”'
         }
     ])
-    const linkMore = () => {
-        navigate('/about', { state: { a: 1 } })
-    }
+    // const linkMore = () => {
+    //     navigate('/about', { state: { a: 1 } })
+    // }
 
     return (
         <div className="home">
@@ -89,7 +89,7 @@ function Home() {
                     <div style={{ color: '#777', textAlign: 'left' }}>——</div>
                     <p> 湖南赞友数字科技有限公司成立于2021年8月，总部设在湖南省长沙市高新区。公司诞生在“互联网+时代乡村振兴”的战略背景下，是一家为“乡村振兴”提供产业扶持、产业培育、乡村市场拓展、产品销售、运营维护等及供应链管理于一体的多元化电子商务综合服务性企业。</p>
                     <p className="company_Introduction--text"> “赞友科技”自成立以来，始终坚持“诚信为本 创新为魂”的发展理念。公司荟萃业界精英，致力于通过公司团队优势、平台优势、流量优势、营销宣传、联盟合作企业资源联动等优势，利用“赞友商城”APP电商平台，助推乡村振兴适应数字化新时代，助推新经济、激发新动能、释放新红利，关注新乡村的发展；“汇聚城市和乡村的力量”，深层次的推动“城乡交汇和融合”；在承担社会责任中实现企业价值。</p>
-                    <div onClick={linkMore} className="company_Introduction--more">点击了解更多</div>
+                    <div className="company_Introduction--more" onClick={() => navigate('/shop')}>点击了解更多</div>
                 </div>
             </div>
             <div className="company_shop">
@@ -186,7 +186,7 @@ function Home() {
                             坚持和加强党的全面领导，把党建引领贯穿企业治理全过程，把加强党的领导和完善公司治理统一起来，把企业党组织内嵌到公司治理结构之中，把党建作为助力改革发展的“倍增器”，充分发挥党组织的领导核心和政治核心作用。
                         </p>
                         <p className="party_building--text">“以党为核心，发挥党员先锋带头作用，为乡村振兴贡献力量”</p>
-                        <div className="party_building--more">查看更多<span>></span></div>
+                        <div className="party_building--more" onClick={() => navigate('/companyNews')}>查看更多<span>></span></div>
                     </div>
                     <div className="party_building--right">
                         <div className="party_building--item">

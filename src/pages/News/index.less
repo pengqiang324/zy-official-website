@@ -12,7 +12,7 @@
             margin-bottom: 0;
             line-height: 26px;
             font-weight: bold;
-            font-size: 26px;
+            font-size: 30px;
             color: rgb(51, 51, 51);
         }
 
@@ -88,6 +88,9 @@
                 font-size: 16px;
                 margin-bottom: 14px;
                 line-height: 21px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
 
             p {
@@ -136,7 +139,8 @@
 
 
 .news-video {
-    height: 540px;
+    height: auto !important;
+    padding: 15px 0 30px !important;
     .shop-notice {
         font-weight: 400;
     }

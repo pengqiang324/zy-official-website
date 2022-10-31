@@ -22,7 +22,8 @@
             justify-content: space-between;
             padding: 10px 0;
             font-size: 14px;
-
+            position: relative;
+            top: 10px;
             h3,
             p {
                 text-align: left;
@@ -56,19 +57,23 @@
             p {
                 margin-bottom: 0;
                 width: 100%;
-                white-space: nowrap;
                 overflow: hidden;
-                text-overflow: ellipsis;
                 font-size: 14px;
                 color: #878787;
                 line-height: 26px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                word-wrap: break-word;
+                word-break: break-all;
+                -webkit-line-clamp: 2;
+                -moz-line-clamp: 2;
             }
         }
     }
 
     .shop-news--list {
         display: flex;
-        align-items: center;
+        align-items: baseline;
         justify-content: space-between;
         cursor: pointer;
     }

@@ -2,6 +2,38 @@
 .banner-user {
     height: 800px;
     overflow: hidden;
+    .user-thumb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.15);
+        height: 60px;
+        transition: transform .35s;
+    }
+    
+    .user-thumb>span {
+        width: 60px;
+        height: 40px;
+        margin: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        -webkit-transition: background .3s;
+        transition: background .3s;
+        background: transparent;
+    }
+    
+    .user-thumb>span.active {
+        background: rgba(255, 255, 255, 0.45);
+    }
+    
+    .user-thumb>span i {
+        display: block;
+        width: 56px;
+        height: 36px;
+        margin: 2px;
+        background-size: cover;
+        background-position: center;
+    }
 }
 
 .banner-user-elem {

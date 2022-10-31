@@ -1,19 +1,25 @@
-import { useEffect } from 'react'
+import { useEffect, lazy } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Home from '../pages/Home'
-import About from '../pages/About'
-import Shop from '../pages/Shop'
-import Rule from '../pages/Rules'
-import News from '../pages/News'
-import CompanyNews from '../pages/CompanyNews'
-import LeadershipCare from '../pages/LeadershipCare'
-import RuralRevitalization from '../pages/RuralRevitalization'
-import RadioStations from '../pages//RadioStations'
-import ResultsShow from '../pages/ResultsShow'
-import HelpCenter from '../pages/HelpCenter'
-import BeginnersGuide from '../pages/BeginnersGuide'
-import VideoList from '../pages/VideoList'
-import PolicyHighlights from '../pages/PolicyHighlights'
+
+// 懒加载组件
+function dynamicImport(componentName) {
+    return lazy(() => import(`../pages/${componentName}/index.jsx`))
+}
+const Home = dynamicImport('Home')
+const About = dynamicImport('About')
+const Shop = dynamicImport('Shop')
+const Rule = dynamicImport('Rules')
+const News = dynamicImport('News')
+const CompanyNews = dynamicImport('CompanyNews')
+const LeadershipCare = dynamicImport('LeadershipCare')
+const RuralRevitalization = dynamicImport('RuralRevitalization')
+const RadioStations = dynamicImport('RadioStations')
+const ResultsShow = dynamicImport('ResultsShow')
+const HelpCenter = dynamicImport('HelpCenter')
+const BeginnersGuide = dynamicImport('BeginnersGuide')
+const VideoList = dynamicImport('VideoList')
+const PolicyHighlights = dynamicImport('PolicyHighlights')
+const ArticleDetails = dynamicImport('ArticleDetails')
 
 // 重定向
 function Redirect({ to }) {
@@ -25,6 +31,10 @@ function Redirect({ to }) {
 }
 
 const routes = [
+    {
+        path: "/",
+        element: <Redirect to="/home" />
+    },
     {
         path: "/about",
         element: <About />
@@ -82,7 +92,11 @@ const routes = [
         element: <PolicyHighlights/>
     },
     {
-        path: "/",
+        path: '/ArticleDetails',
+        element: <ArticleDetails/>
+    },
+    {
+        path: '*', // 这个404页面不会被匹配到
         element: <Redirect to="/home" />
     }
 ]
@@ -146,7 +160,8 @@ export const pageTitles = {
     '/HelpCenter': '帮助中心',
     '/BeginnersGuide': '新手指南',
     '/VideoList': '视频列表',
-    '/PolicyHighlights': '政策要闻'
+    '/PolicyHighlights': '政策要闻',
+    '/ArticleDetails': '文章详情'
 }
 
 export default routes

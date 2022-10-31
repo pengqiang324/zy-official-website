@@ -1,38 +1,12 @@
 import './index.less'
 import CompanyPublicity from './components/CompanyPublicity'
 import ScrollWidthTweenOne from '@/components/ScrollWidthTweenOne/ScrollWidthTweenOne'
+import BeginnerGuide from '@/mock/BeginnerGuide.json'
+import { useNavigate } from 'react-router-dom'
 
 function HelpCenter() {
-    
-    const problemList = [
-        {
-            title: '新手指南-公司介绍'
-        },
-        {
-            title: '新手指南-APP下载相关问题'
-        },
-        {
-            title: '新手指南-商家入驻相关问题'
-        },
-        {
-            title: '新手指南-购物返佣相关问题'
-        },
-        {
-            title: '新手指南-返佣相关问题'
-        },
-        {
-            title: ' 新手指南-96会员相关问题'
-        },
-        {
-            title: '新手指南-96赞友卡相关问题'
-        },
-        {
-            title: '新手指南-阅读值相关问题'
-        },
-        {
-            title: '新手指南-用户成长体系相关问题'
-        }
-    ]
+    const navigate = useNavigate()
+    const problemList = [...BeginnerGuide.slice(0,9)]
 
     const commonProblems = [
         {
@@ -52,6 +26,12 @@ function HelpCenter() {
             content: '您好，我司从未接到任何有关部门的立案调查。我司坚持依法合规经营，请各位用户不信谣不传谣。任何信息请以APP或微信公众号公告为准。请知悉，谢谢。 '
         }
     ]
+
+    const toPage = (pathName, data={}) => {
+        return () => {
+            navigate(pathName, data)
+        }
+    }
     return (
         <div className="HelpCenter">
             <CompanyPublicity/>
@@ -74,7 +54,7 @@ function HelpCenter() {
                                 <div className='HelpCenter-left-list'>
                                     {
                                         problemList.map((problem, index) => (
-                                            <div className="HelpCenter-list--item" key={index}>{problem.title}</div>
+                                            <div className="HelpCenter-list--item" key={index} onClick={toPage('/ArticleDetails', { state: problem })}>{problem.title}</div>
                                         ))
                                     }
                                 </div>
@@ -92,11 +72,11 @@ function HelpCenter() {
                                 </div>
                                 <div className="HelpCenter-right--bottom">
                                     <div className="HelpCenter-bottom--list">
-                                        <div className="HelpCenter-list--item">
+                                        <div className="HelpCenter-list--item" onClick={toPage('/BeginnersGuide')}>
                                             <div className="HelpCenter-item--image"></div>
                                             <h4>新手入门指南</h4>
                                         </div>
-                                        <div className="HelpCenter-list--item">
+                                        <div className="HelpCenter-list--item" onClick={toPage('/VideoList')}>
                                             <div className="HelpCenter-item--image"></div>
                                             <h4>96赞友卡相关问题</h4>
                                         </div>
@@ -124,7 +104,7 @@ function HelpCenter() {
                                 </ScrollWidthTweenOne>
                             ))
                         }
-                        <div className="news-more" style={{marginTop: '120px'}}>
+                        <div className="news-more" style={{ marginTop: '120px' }} onClick={toPage('/BeginnersGuide')}>
                             <span>查看更多&nbsp;></span>
                         </div>
                     </div>

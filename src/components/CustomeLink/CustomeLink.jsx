@@ -22,7 +22,7 @@ function CustomLink({ children, to, ...props }) {
     return (
         <div className="link-list">
             <Link
-                style={{ color: match ? "#333" : "rgba(119, 119, 119, 1)", fontWeight: match ? "bold" : '' }}
+                style={{ color: match ? "#333" : "rgba(119, 119, 119, 1)"}}
                 to={to}
                 {...props}
                 onMouseEnter={mounseEnter}
@@ -43,7 +43,7 @@ function CustomLink({ children, to, ...props }) {
                                 <Link
                                     to={item.path}
                                     className="link-children--item"
-                                    style={{ color: location.pathname === item.path ? '#333' : 'rgb(119, 119, 119)', fontWeight: location.pathname === item.path ?"bold": '' }}
+                                    style={{ color: location.pathname === item.path ? '#333' : 'rgb(119, 119, 119)' }}
                                     key={index}
                                 >{item.name}</Link>
                             ))

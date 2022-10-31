@@ -5,6 +5,8 @@ import Video from '../News/media/3.mp4'
 import { Fragment } from 'react'
 import { OverPack } from 'rc-scroll-anim'
 import TweenOne from 'rc-tween-one'
+import CompanyNews from '@/mock/CompanyNews.json'
+import { useNavigate } from 'react-router-dom'
 
 function RadioStations() {
     const sources = {
@@ -12,28 +14,9 @@ function RadioStations() {
             play_url: Video
         }
     }
-    const radioList = [
-        {
-            title: '赞友商城携手广州联通为乡村振兴“赋能加码”',
-            time: '2022-10-20'
-        },
-        {
-            title: ' 湖南省民营企业首支乡村振兴专项发展基金成立',
-            time: '2022-10-20'
-        },
-        {
-            title: '长沙“赞友商城”电商平台为乡村振兴农产品销售打开新通道',
-            time: '2022-10-20'
-        },
-        {
-            title: ' 赞友商城乡村振兴专项研讨会在湖南赞友数字科技有限公司召开',
-            time: '2022-10-14'
-        },
-        {
-            title: '携手赞友商城，共织乡村振兴“幸福网',
-            time: '2022-08-10'
-        }
-    ]
+    const radioList = [CompanyNews[0], ...CompanyNews.slice(-3), CompanyNews[4]]
+    const navigate = useNavigate()
+
     return (
         <div className="RadioStations">
             <div className="RadioStations-banner"></div>
@@ -54,9 +37,9 @@ function RadioStations() {
                                     {
                                         radioList.map((radio, index) => (
                                             <Fragment key={index}>
-                                                <div className="RadioStations-list--item">
+                                                <div className="RadioStations-list--item" onClick={() => navigate('/ArticleDetails', { state: radio })}>
                                                     <h4>{radio.title}</h4>
-                                                    <p>{radio.time}</p>
+                                                    <p>{radio.createAtDate.replace(/\//g, '-')}</p>
                                                 </div>
                                                 {index !== radioList.length - 1 && <div className="RadioStations-line"></div>}
                                             </Fragment>
