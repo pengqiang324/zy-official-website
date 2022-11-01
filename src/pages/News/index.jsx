@@ -11,6 +11,7 @@ import Video from '@/components/Video/Video'
 import LeaderList from './components/LeaderList'
 import MediaCoverage from './components/MediaCoverage'
 import Banner from './components/Banner'
+import ButtonMore from '../../components/ButtomMore/ButtonMore'
 import CompanyNews from '@/mock/CompanyNews.json'
 import { splitTime } from '../../utils/index'
 
@@ -111,18 +112,14 @@ function News() {
                                     <div className="shop-Introduction--pri"></div>
                                 </div>
                             </div>
-                            <div className="news-more" onClick={() => navigate('/companyNews')}>
-                                <span>查看更多&nbsp;></span>
-                            </div>
+                            <ButtonMore to='/companyNews'></ButtonMore>
                         </div>
                     </div>
                 </div>
                 <div className="news-info">
                     <div className="fixed-box">
                         <LeaderList/>
-                        <div className="news-more" onClick={() => navigate('/LeadershipCare')}>
-                            <span style={{ color: 'rgba(216, 27, 67, 1)' }}>查看更多&nbsp;></span>
-                        </div>
+                        <ButtonMore to='/LeadershipCare' linkStyl={{ color: 'rgba(216, 27, 67, 1)' }}></ButtonMore>
                     </div>
                 </div>
                 <MediaCoverage title="媒体报道" subtitle="media coverage"/>
@@ -140,9 +137,7 @@ function News() {
                                 ))
                             }
                         </div>
-                        <div className="news-more video-more" style={{ marginTop: '52px' }} onClick={() => navigate('/VideoList')}>
-                            <span>了解更多&nbsp;></span>
-                        </div>
+                        <ButtonMore prefixCls="video-more" to='/VideoList' style={{ marginTop: '52px' }}>了解更多</ButtonMore>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,6 @@
 import './App.less'
 import { useEffect, Suspense } from 'react'
 import { useRoutes, useLocation } from 'react-router-dom'
-// import { BackTop } from 'antd'
 import BackToUp from '@uiw/react-back-to-top'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
@@ -23,9 +22,6 @@ function App() {
         <div className="panel-body">
           {/*注册路由*/}
           {element}
-          {/* <BackTop>
-            <div style={style}>UP</div>
-          </BackTop> */}
           <BackToUp size={60} strokeWidth={4}>
             <VerticalAlignTopOutlined style={{fontSize: '20px', }} className='backtoup-icon'/>
           </BackToUp>

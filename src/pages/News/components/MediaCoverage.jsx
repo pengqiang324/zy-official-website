@@ -2,6 +2,7 @@ import './MediaCoverage.less'
 import mediaBg1 from '../images/mediaBg1.png'
 import mediaBg2 from '../images/mediaBg2.png'
 import mediaBg3 from '../images/mediaBg3.png'
+import ButtonMore from '@/components/ButtomMore/ButtonMore'
 import { OverPack } from 'rc-scroll-anim'
 import TweenOne from 'rc-tween-one'
 import { useNavigate } from 'react-router-dom'
@@ -39,9 +40,7 @@ function MediaCoverage({ enableAnimate, title, subtitle }) {
         }
     </div>
 
-    const renderMoreDom = <div className="news-more" style={{ marginTop: '52px' }} onClick={() => navigate('/companyNews')}>
-        <span>查看更多&nbsp;></span>
-    </div>
+    const renderMoreDom = <ButtonMore to='/companyNews' style={{ marginTop: '52px' }}></ButtonMore>
 
     return (
         <div className="news-media--coverage">

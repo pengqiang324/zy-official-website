@@ -1,6 +1,7 @@
 import './index.less'
 import CompanyPublicity from './components/CompanyPublicity'
 import ScrollWidthTweenOne from '@/components/ScrollWidthTweenOne/ScrollWidthTweenOne'
+import ButtonMore from '@/components/ButtomMore/ButtonMore'
 import BeginnerGuide from '@/mock/BeginnerGuide.json'
 import { useNavigate } from 'react-router-dom'
 
@@ -104,9 +105,7 @@ function HelpCenter() {
                                 </ScrollWidthTweenOne>
                             ))
                         }
-                        <div className="news-more" style={{ marginTop: '120px' }} onClick={toPage('/BeginnersGuide')}>
-                            <span>查看更多&nbsp;></span>
-                        </div>
+                        <ButtonMore style={{ marginTop: '120px' }} to="/BeginnersGuide"></ButtonMore>
                     </div>
                 </div>
             </div>
